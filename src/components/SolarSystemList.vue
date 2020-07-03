@@ -1,9 +1,9 @@
 <template lang="html">
 
 <div class="solar-system-search-body-container">
-    <p>This drop-down search box contains {{solarSystemBodies.bodies.length}} objects from our Solar System.</p>
+    <h3>Search from {{solarSystemBodies.bodies.length}} objects in our Solar System.</h3>
      <form class="body-form" v-on:submit.prevent>
-         <input type="text" v-model="search" placeholder="Select a Solar System Object..." v-on:keyup="searchForObject">
+         <input type="text" v-model="search" placeholder="Start Typing here or select from drop-down below" v-on:keyup="searchForObject">
          <select v-on:change="handleSelect" v-model="selectedBody">
              <option disabled value="">Select a Solar System Object...</option>
              <option v-for ="body in solarSystemBodies.bodies" :value="body">{{body.englishName}}</option>
@@ -49,14 +49,17 @@ export default {
 <style>
 
 .solar-system-search-body-container {
-    padding-top: 20px
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
 }
 
 .body-form {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 300px;
+    width: 380px;
     }
 
 </style>

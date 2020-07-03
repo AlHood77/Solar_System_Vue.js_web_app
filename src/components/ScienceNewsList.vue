@@ -1,21 +1,22 @@
 <template lang="html">
 	<div class="news-container">
-		<input type="text" placeholder="Enter something" v-model="query" />
-		<input type="submit" @click="getResult" />
-
-        <div class="cards">
-            <div class="card" v-for="result in results">
-					<div class="card">
-						<img class="card-img-top" :src="result.urlToImage" />
-						<div class="card-body">
-							<h4>{{ result.title }}</h4>
-							<p class="card-text">{{ result.description }}</p>
-							<a :href="result.url" class="card-link">Read More</a>
-						</div>
-					</div>
-		    </div>
-        </div>
+        <h3>Search Solar System news articles from NewsAPI</h3>
+			<input class="input" type="text" placeholder="Enter something" v-model="query" />
+			<input class="submit" type="submit" @click="getResult" />
 		
+
+		<div class="cards">
+			<div class="card" v-for="result in results">
+				<div class="card">
+					<img class="card-img-top" :src="result.urlToImage" />
+					<div class="card-body">
+						<h4>{{ result.title }}</h4>
+						<p class="card-text">{{ result.description }}</p>
+						<a :href="result.url" class="card-link">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -57,18 +58,27 @@
 
 <style scoped>
 
-.cards {
-    margin: 0 auto;
-    max-width: 1800px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+.news-container {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.card {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+.input {
+    width: 380px;
 }
 
- 
+.submit {
+    margin-bottom: 20px;
+}
+	.cards {
+		margin: 0 auto;
+		max-width: 1800px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+	}
 
+	.card {
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	}
 </style>

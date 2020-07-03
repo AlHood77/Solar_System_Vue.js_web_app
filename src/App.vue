@@ -4,10 +4,11 @@
 
     <header class="header">
       <h1>Solar System App</h1>
-      <p>Search all the planets and thier moons, all dwarf planets and thier main asteroids.</p>
+      <p>Search all the planets, dwarf planets, moons and the main asteroids in our Solar System.</p>
     </header>
 
-    <div class="search-header">
+    <div class="components-container">
+        <div class="search-header">
       <solar-system-list :solarSystemBodies='solarSystemBodies'></solar-system-list>
     </div>
 
@@ -22,6 +23,8 @@
     <div class="Articles">
       <science-news-list></science-news-list>
     </div>
+    </div>
+    
   
   </div>
 
@@ -68,12 +71,24 @@ export default {
 * {
   box-sizing: border-box;
   margin: 0;
+  
+}
+
+html, body {
+  background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
+}
+
+.components-container {
+  /* height: 100%; */
+  
+  color: white;
 }
 
 .header {
   padding: 60px;
   text-align: center;
-  background: #11aabb;
+  background: url(assets/space.png);
+  background-position: center;
   color: white;
   font-size: 20px;
 }
