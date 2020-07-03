@@ -1,6 +1,6 @@
-<template lang="html">
 
-<div class="columns medium-4">
+
+<!-- <div class="columns medium-4">
   <div class="card">
     <div class="card-divider">
       {{article.title}}
@@ -33,4 +33,4 @@ div.columns.medium-4 {
 height: 400px;
 }
 
-</style>
+</style> -->

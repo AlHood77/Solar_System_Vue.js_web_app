@@ -1,6 +1,6 @@
 <template lang="html">
 
-<div v-if="body" id="body-detail">
+<div class="search-body-results" v-if="body" id="body-detail">
       <h2>{{body.englishName}}</h2>
       <p><span>Radius</span>: {{body.meanRadius}}</p>
       <p><span>Revolution Around Sun</span>: {{body.sideralOrbit}}</p>
