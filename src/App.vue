@@ -1,6 +1,6 @@
 <template>
   
-  <div id="#App" >
+  <div id="#App">
 
     <header class="header">
       <h1>Solar System App</h1>
@@ -8,21 +8,36 @@
     </header>
 
     <div class="components-container">
-        <div class="search-header">
-      <solar-system-list :solarSystemBodies='solarSystemBodies'></solar-system-list>
-    </div>
 
-    <div class="Data-Bar">
-        <solar-system-details />
-    </div>
-      
-    <div>
-        <nasa-image></nasa-image>
-    </div>
+        <div class="wrapper">
+
+          <div class="details-wrapper">
+
+             <div class="App-list">
+              <solar-system-list :solarSystemBodies='solarSystemBodies'></solar-system-list>
+            </div>
+
+            <div class="object-info">
+              <solar-system-details />
+            </div>
+
+          </div>
+          
+
+            <div class="nasa-stuff">
+              <nasa-image class="nasa"></nasa-image>
+            </div>
+
+        </div>
+
+              
+        
+            
+        
     
-    <div class="Articles">
-      <science-news-list></science-news-list>
-    </div>
+        <div class="Articles">
+          <science-news-list></science-news-list>
+        </div>
     </div>
     
   
@@ -68,20 +83,18 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
-  
+
 }
+
 
 html, body {
   background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
-}
-
-.components-container {
-  /* height: 100%; */
   
-  color: white;
 }
 
 .header {
@@ -92,6 +105,24 @@ html, body {
   color: white;
   font-size: 20px;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.App-list {
+  text-align: center;
+}
+
+.nasa {
+  margin-top: 20px;
+}
+
+.nasa-stuff {
+  text-align: center;
+}
+
 
 
 </style>

@@ -1,6 +1,6 @@
 <template lang="html">
 	<div class="news-container">
-        <h3>Search Solar System news articles from NewsAPI</h3>
+        <h3>Search Solar System news articles from NewsAPI.</h3>
 			<input class="input" type="text" placeholder="Enter something" v-model="query" />
 			<input class="submit" type="submit" @click="getResult" />
 		
@@ -12,7 +12,9 @@
 					<div class="card-body">
 						<h4>{{ result.title }}</h4>
 						<p class="card-text">{{ result.description }}</p>
-						<a :href="result.url" class="card-link">Read More</a>
+                        <p>{{result.source.name}}</p>
+                        <p>{{result.publishedAt}}</p>
+						<a :href="result.url" target="_blank" class="card-link">Read More</a>
 					</div>
 				</div>
 			</div>
@@ -61,6 +63,8 @@
 .news-container {
     margin-left: 20px;
     margin-right: 20px;
+	color: #f2a127;
+   
 }
 
 .input {

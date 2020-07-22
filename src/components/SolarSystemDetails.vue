@@ -38,6 +38,10 @@ export default {
 
 .search-body-results {
       margin-left: 20px;
+      color: white;
+      
+      
+      
 }
 
 </style>>

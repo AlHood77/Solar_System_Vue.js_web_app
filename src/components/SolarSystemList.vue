@@ -49,9 +49,12 @@ export default {
 <style>
 
 .solar-system-search-body-container {
+    
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+    color: #f2a127;
+    align-items: center;
 
 }
 
